@@ -19,7 +19,11 @@ driver = webdriver.Chrome(service=service, options=chrome_options)
 
 # Open WhatsApp Web
 driver.get("https://web.whatsapp.com/")
+<<<<<<< HEAD
 print("📲 Scan the QR code on WhatsApp Web and press Enter to continue...")
+=======
+input("📲 Scan the QR code on WhatsApp Web and press Enter to continue...")
+>>>>>>> c0159c63ada36cfb24e3e45701ce477a593bded4
 
 # Function to send WhatsApp messages
 def send_whatsapp_message(number, message):
