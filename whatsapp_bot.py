@@ -19,17 +19,14 @@ driver = webdriver.Chrome(service=service, options=chrome_options)
 
 # Open WhatsApp Web
 driver.get("https://web.whatsapp.com/")
-<<<<<<< HEAD
 print("📲 Scan the QR code on WhatsApp Web and press Enter to continue...")
-=======
-print("📲 Scan the QR code on WhatsApp Web and press Enter to continue...")
->>>>>>> c0159c63ada36cfb24e3e45701ce477a593bded4
+input()
 
 # Function to send WhatsApp messages
 def send_whatsapp_message(number, message):
     number = number.replace("+", "").replace(" ", "")  # Ensure correct phone format
     url = f"https://web.whatsapp.com/send?phone={number}&text={message}"
-
+    
     driver.get(url)
     time.sleep(10)  # Wait for chat to load
 
@@ -44,7 +41,7 @@ def send_whatsapp_message(number, message):
         print(f"❌ Failed to send message to {number}: {e}")
 
 # Example: Send a test message
-send_whatsapp_message("60123456789", "Your grocery order is confirmed! 🛒 Delivery will be arranged soon.")
+send_whatsapp_message("60123456789", "Your grocery order is confirmed! 🚚 Delivery will be arranged soon.")
 
 # Keep the script running for handling multiple messages
 while True:
